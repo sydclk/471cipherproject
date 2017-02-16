@@ -1,3 +1,5 @@
+%Author: Sydney Clark
+
 function plotMono(includeLetterFrequency)
     global MonoFrequencyTable
     global CipherText

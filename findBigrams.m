@@ -1,3 +1,5 @@
+% Author: Sydney Clark
+
 function [ bigrams ] = findBigrams()
     global CipherText
 

@@ -1,3 +1,4 @@
+% Author: Sydney Clark
 function [ sortedFrequencyTable ] = MonoFrequency( cipherText )
 
     x = 0:25; % character values

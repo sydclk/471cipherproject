@@ -1,3 +1,4 @@
+% Author: Sydney Clark
 function [v] = GCDList( n )
 
     v = gcd(n(length(n)-1), n(length(n)));

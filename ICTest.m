@@ -1,3 +1,4 @@
+% Author: Sydney Clark
 function [ IC ] = ICTest(NumberOfRows )
     global CipherText
     

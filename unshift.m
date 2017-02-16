@@ -1,3 +1,5 @@
+%Author: Sydney Clark
+
 function [ plainText ] = unshift( cipherText, CipherFrequency, FrequencyTable )
 
     shifts = mod(FrequencyTable(:,1) - CipherFrequency(:,1), 26);

@@ -1,3 +1,4 @@
+% Author: Sydney Clark
 function  LoadFile( filename )
     global CipherText MonoFrequencyTable BiFrequencyTable
     

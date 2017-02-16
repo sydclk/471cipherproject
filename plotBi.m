@@ -1,3 +1,5 @@
+% Author: Sydney Clark
+
 function plotBi( numberOfBigrams, includeBigramFrequency )
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here

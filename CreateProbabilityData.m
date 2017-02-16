@@ -1,3 +1,5 @@
+% Author: Sydney Clark
+
 function CreateProbabilityData()
     global monoProbability biProbability  triProbability wordProbability
    

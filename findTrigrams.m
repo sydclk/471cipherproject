@@ -1,3 +1,5 @@
+% Author: Sydney Clark
+
 function [ trigrams ] = findTrigrams()
     global CipherText
 
