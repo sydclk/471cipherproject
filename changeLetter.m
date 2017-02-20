@@ -1,13 +1,15 @@
 %Author: Brett Bushnell
 
 function changeLetter(cipherLetter , guessLetter)
-global ciphertext
+global tempPlainTextNum
 
+%cipherLetterNum = str2num(cipherLetter);
+%guessLetterNum = str2num(guessLetter);
 
 %Go through ciphertext and find letters to change
-for i = 1:length(ciphtertext)
-    if ciphertext(i) == cipherLetter 
-        ciphertext(i) = guessLetter;
+for i = 1:length(tempPlainTextNum)
+    if tempPlainTextNum(i) == cipherLetter; 
+        tempPlainTextNum(i) = guessLetter;
     end 
 end
 
