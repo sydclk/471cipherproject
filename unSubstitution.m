@@ -15,13 +15,23 @@ table(letter, monoFrequencies)
 %shows the most common bigrams in the cipher text
 plotBi(15, 0)
 
+%Print out initial cipher text
+    hFig2 = figure('Menubar', 'none', 'Toolbar', 'none'); %Plot for the guessed plaintext
+    hFig1 = figure('Menubar','none', 'Toolbar','none');
+    hPan = uipanel(hFig1, 'Title','cipherText', ...
+                   'Units','normalized', 'Position',[0.05 0.05 0.9 0.9]);
+    hEdit = uicontrol(hPan, 'Style','edit', 'FontSize',9, ...
+                        'Min',0, 'Max',2, 'HorizontalAlignment','left', ...
+                        'Units','normalized', 'Position',[0 0 1 1], ...
+                        'String',tempPlainText); 
+
 while(1)
     %print out original ciphertext
-    fprintf(char(cipherText + 'a'));
-    fprintf('\n');
-    fprintf('\n');
+    %fprintf(char(cipherText + 'a'));
+    %fprintf('\n');
+    %fprintf('\n');
     %ask user what letters they want to change
-    userInput = input('Please enter letter you want to change and letter you want to replace it with, separated by a space (Enter "q" to quit): ', 's');
+    userInput = input('[Letter to change] [Letter to change to] (q to quit, f to print result): ', 's');
     
     %if q, quit
     if(userInput == 'q')
@@ -35,8 +45,12 @@ while(1)
     %change the letters and print out result
     changeLetter(userInput(1), userInput(3));
     tempPlainText = char(tempPlainTextNum)';
-    fprintf(tempPlainText);
-    fprintf('\n')
+    hPan = uipanel(hFig2, 'Title','guessedPlainText', ...
+                   'Units','normalized', 'Position',[0.05 0.05 0.9 0.9]);
+    hEdit = uicontrol(hPan, 'Style','edit', 'FontSize',9, ...
+                        'Min',0, 'Max',2, 'HorizontalAlignment','left', ...
+                        'Units','normalized', 'Position',[0 0 1 1], ...
+                        'String',tempPlainText); 
 end
 
 %if user is finished, print out the final plaintext
